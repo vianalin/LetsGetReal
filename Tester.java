@@ -29,5 +29,7 @@ public class Tester {
         System.out.println(a2.equals(b2)); //testing equals: true
         RationalNumber c2 = new RationalNumber(4, 8);
         System.out.println(b2.equals(c2)); //testing equals: false
+
+        System.out.println(a2.toString()); //testing tostring
     }
 }
