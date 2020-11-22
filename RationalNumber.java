@@ -9,8 +9,8 @@ public class RationalNumber extends RealNumber
   */
   public RationalNumber(int nume, int deno){
     super(0.0);//this value is ignored! 
-    if (deno == 0) {
-      numerator = nume;
+    if(deno == 0) {
+      numerator = 0;
       denominator = 1;
     } else {
       numerator = nume;
