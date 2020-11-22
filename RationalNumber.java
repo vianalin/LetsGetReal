@@ -9,13 +9,14 @@ public class RationalNumber extends RealNumber
   */
   public RationalNumber(int nume, int deno){
     super(0.0);//this value is ignored! 
-    if(deno == 0) {
-      numerator = 0;
+    if (deno == 0) {
+      numerator = nume;
       denominator = 1;
     } else {
       numerator = nume;
       denominator = deno;
     }
+    reduce();
   }
 
   public double getValue(){
@@ -84,6 +85,9 @@ public class RationalNumber extends RealNumber
   *reduced after construction.
   */
   private void reduce(){
+    int gcd = gcd(getNumerator(), getDenominator());
+    numerator /= gcd;
+    denominator /= gcd;
 
   }
   /******************Operations Return a new RationalNumber!!!!****************/
