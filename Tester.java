@@ -12,5 +12,8 @@ public class Tester {
         System.out.println(d.equals(e)); //testing equals: false
 
         System.out.println(d.add(e)); //testing add
+        System.out.println(d.multiply(e)); //testing multiply
+        System.out.println(d.divide(e)); //testing divide
+        System.out.println(d.subtract(e)); //tesing subtract
     }
 }
