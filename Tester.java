@@ -33,6 +33,8 @@ public class Tester {
 
         System.out.println(a2.multiply(c2)); //testing multiply: 3/16
         System.out.println(a2.divide(c2)); //testing divide: 3/4
+        System.out.println(a2.add(c2)); //testing add: -7/8
+        System.out.println(a2.subtract(c2)); //testing subtract: 1/8
 
 
 
