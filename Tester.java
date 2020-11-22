@@ -23,6 +23,6 @@ public class Tester {
         System.out.println(a2.getValue()); //testing getvalue
         System.out.println(a2.getNumerator()); //testing getnumerator
         System.out.println(a2.getDenominator()); //testing getdenominator
-
+        System.out.println(a2.reciprocal().getValue()); //testing reciprocal
     }
 }
