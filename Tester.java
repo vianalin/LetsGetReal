@@ -31,7 +31,8 @@ public class Tester {
         System.out.println(b2.equals(c2)); //testing equals: false
         System.out.println(c2.toString()); //testing tostring & reduce
 
-        System.out.println(a2.multiply(c2)); //testing multiply
+        System.out.println(a2.multiply(c2)); //testing multiply: 3/16
+        System.out.println(a2.divide(c2)); //testing divide: 3/4
 
 
 
