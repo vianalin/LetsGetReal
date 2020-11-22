@@ -10,5 +10,7 @@ public class Tester {
         System.out.println(c.equals(d)); //testing equals: true
         RealNumber e = new RealNumber(100);
         System.out.println(d.equals(e)); //testing equals: false
+
+        System.out.println(d.add(e)); //testing add
     }
 }
