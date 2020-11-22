@@ -19,9 +19,9 @@ public class RealNumber{
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
   public boolean equals(RealNumber other){
-    if(this.getValue() == 0 && other.getValue() == 0) return true;
-    double difference = Math.abs(this.getValue() - other.getValue());
-    if(difference < 0.00001 * this.getValue() && difference < 0.00001 * other.getValue()) return true;
+    if(getValue() == 0 && other.getValue() == 0) return true;
+    double difference = Math.abs(getValue() - other.getValue());
+    if(difference < 0.00001 * getValue() && difference < 0.00001 * other.getValue()) return true;
     return false;
 }
 
@@ -30,9 +30,7 @@ public class RealNumber{
   *the sum of this and the other
   */
   public RealNumber add(RealNumber other){
-     //other can be ANY RealNumber, including a RationalNumber
-     //or other subclasses of RealNumber (that aren't written yet)
-     return null;
+     return new RealNumber(getValue() + other.getValue());
   }
 
   /*
