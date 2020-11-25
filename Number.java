@@ -16,6 +16,10 @@ public abstract class Number{
   *are within 0.00001 of eachother.
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
-  //public boolean equals(Number other){
-  //}
+  public boolean equals(RealNumber other){
+    if(getValue() == 0 && other.getValue() == 0) return true;
+    double difference = Math.abs(getValue() - other.getValue());
+    if(difference < 0.00001 * getValue() && difference < 0.00001 * other.getValue()) return true;
+    return false;
+  }
 }
