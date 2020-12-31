@@ -8,7 +8,7 @@ public class RationalNumber extends RealNumber {
   */
   public RationalNumber(int nume, int deno){
     super(0.0);//this value is ignored! 
-    if(deno == 0 || nume == 0) {
+    if(deno == 0) {
       numerator = 0;
       denominator = 1;
     } 
@@ -67,17 +67,21 @@ public class RationalNumber extends RealNumber {
   private static int gcd(int a, int b){
     /*use euclids method or a better one*/
     //http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
+    if ((a == 0) || (b == 0)) return 0;
+
     int bigger = a;
     int smaller = b;
-    if(b > a) {
+    if (b > a) {
       bigger = b;
       smaller = a;
     }
-    while(Math.abs(bigger) % Math.abs(smaller) != 0) {
-      int old = bigger;
+
+    while (Math.abs(bigger) % Math.abs(smaller) != 0) {
+      int oldBigger = bigger;
       bigger = smaller;
-      smaller = (Math.abs(old) % Math.abs(smaller));
+      smaller = (Math.abs(oldBigger) % Math.abs(smaller));
     }
+
     return smaller;
   }
 
@@ -88,13 +92,10 @@ public class RationalNumber extends RealNumber {
   */
   private void reduce(){
     int gcd = gcd(getNumerator(), getDenominator());
-    numerator /= gcd;
-    denominator /= gcd;
-    if(denominator < 0) {
-      numerator /= -1;
-      denominator /= -1;
+    if(gcd != 0 && gcd != 1) {
+      numerator /= gcd;
+      denominator /= gcd;
     }
-
   }
   /******************Operations Return a new RationalNumber!!!!****************/
   /**
