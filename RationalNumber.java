@@ -11,7 +11,15 @@ public class RationalNumber extends RealNumber {
     if(deno == 0) {
       numerator = 0;
       denominator = 1;
-    } 
+    }
+    else if(deno < 0 && nume < 0) {
+      numerator = nume * -1;
+      denominator = deno * -1;
+    }
+    else if(deno < 0) {
+      numerator = nume * -1;
+      denominator = deno * -1;
+    }
     else {
       numerator = nume;
       denominator = deno;
