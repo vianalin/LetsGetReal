@@ -44,5 +44,8 @@ public class Tester {
         RationalNumber e2 = new RationalNumber(0,4); //testing nume 0
         System.out.println(e2.getValue());
         System.out.println(e2.toString());
+
+        RationalNumber f2 = new RationalNumber(-100,-55);
+        System.out.println(f2.toString());
     }
 }
