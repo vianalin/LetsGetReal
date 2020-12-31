@@ -6,6 +6,7 @@ public class Tester {
         RealNumber a1 = new RealNumber(0);
         RealNumber b1 = new RealNumber(0);
         System.out.println(a1.equals(b1)); //testing equals: true
+        System.out.println(a1.equals(b1));
         RealNumber c1 = new RealNumber(499.996);
         RealNumber d1 = new RealNumber(500);
         System.out.println(c1.equals(d1)); //testing equals: true
@@ -36,7 +37,12 @@ public class Tester {
         System.out.println(a2.add(c2)); //testing add: -7/8
         System.out.println(a2.subtract(c2)); //testing subtract: 1/8
 
+        RationalNumber d2 = new RationalNumber(4,0); //testing denom 0
+        System.out.println(d2.getValue());
+        System.out.println(d2.toString());
 
-
+        RationalNumber e2 = new RationalNumber(0,4); //testing nume 0
+        System.out.println(e2.getValue());
+        System.out.println(e2.toString());
     }
 }
