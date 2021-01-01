@@ -16,10 +16,6 @@ public class RationalNumber extends RealNumber {
       numerator = nume * -1;
       denominator = deno * -1;
     }
-    else if(deno < 0) {
-      numerator = nume * -1;
-      denominator = deno * -1;
-    }
     else {
       numerator = nume;
       denominator = deno;
@@ -54,7 +50,7 @@ public class RationalNumber extends RealNumber {
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
   */
   public boolean equals(RationalNumber other){
-    return getNumerator() == other.getNumerator() && getDenominator() == other.getDenominator();
+    return ((getNumerator() == other.getNumerator()) && (getDenominator() == other.getDenominator()));
   }
 
 
