@@ -20,6 +20,7 @@ public class RealNumber extends Number {
   *the sum of this and the other
   */
   public RealNumber add(RealNumber other){
+    if(this == null || other == null) return null;
     return new RealNumber(getValue() + other.getValue());
   }
 
@@ -28,6 +29,7 @@ public class RealNumber extends Number {
   *the product of this and the other
   */
   public RealNumber multiply(RealNumber other){
+    if(this == null || other == null) return null;
     return new RealNumber(getValue() * other.getValue());
   }
 
@@ -36,6 +38,7 @@ public class RealNumber extends Number {
   *this divided by the other
   */
   public RealNumber divide(RealNumber other){
+    if(this == null || other == null || other.getValue() == 0) return null;
     return new RealNumber(getValue() / other.getValue());
   }
 
@@ -44,6 +47,7 @@ public class RealNumber extends Number {
   *this minus the other
   */
   public RealNumber subtract(RealNumber other){
+    if(this == null || other == null) return null;
     return new RealNumber(getValue() - other.getValue());
   }
 }
