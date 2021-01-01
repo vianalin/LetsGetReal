@@ -18,8 +18,7 @@ public abstract class Number{
   */
   public boolean equals(RealNumber other){
     if(getValue() == 0 && other.getValue() == 0) return true;
-    double difference = Math.abs(getValue() - other.getValue());
-    if(difference < 0.00001 * getValue() && difference < 0.00001 * other.getValue()) return true;
-    return false;
+    double difference = Math.abs(getValue() - other.getValue()) / ((getValue() + other.getValue()) / 2);
+    return Math.abs(difference) <= 0.00001;
   }
 }
