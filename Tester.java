@@ -6,12 +6,15 @@ public class Tester {
         RealNumber a1 = new RealNumber(0);
         RealNumber b1 = new RealNumber(0);
         System.out.println(a1.equals(b1)); //testing equals: true
-        System.out.println(a1.equals(b1));
         RealNumber c1 = new RealNumber(499.996);
         RealNumber d1 = new RealNumber(500);
         System.out.println(c1.equals(d1)); //testing equals: true
         RealNumber e1 = new RealNumber(100);
         System.out.println(d1.equals(e1)); //testing equals: false
+
+        RealNumber f1 = new RealNumber(-8090); //testing equals with actual smaller numbers
+        RealNumber g1 = new RealNumber(-8090.00000000000001);
+        System.out.println(f1.equals(g1));
 
         System.out.println(d1.add(e1)); //testing add
         System.out.println(d1.multiply(e1)); //testing multiply
@@ -45,7 +48,7 @@ public class Tester {
         System.out.println(e2.getValue());
         System.out.println(e2.toString());
 
-        RationalNumber f2 = new RationalNumber(-100,-55);
+        RationalNumber f2 = new RationalNumber(-100,-55); //simplify 
         System.out.println(f2.toString());
     }
 }
